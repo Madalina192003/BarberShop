@@ -2,213 +2,491 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lectia 1 HTML&CSS</title>
+    <title>BarberShop</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!--Header section-->
-    <header>
-      <div>
-        <a href="#"><img src="imagini/Logo.svg" alt="imagine logo" /></a>
+    <!--Header Section-->
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="#"><img src="./imagini/Logo.svg" alt="Logo" /></a>
+        </div>
+        <nav class="header__navigation">
+          <ul>
+            <li><a href="#Despre-noi" class="active">Despre noi</a></li>
+            <li><a href="#Servicii-si-preturi">Servicii și Prețuri</a></li>
+            <li><a href="#Barbers">Barbers</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header__info">
+          <a href="tel:+4074635637">Tel: +4074635637</a>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services And Prices</a></li>
-          <li><a href="#">Barbers</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div><a href="tel:+38 044 111 11 11">+38 044 111 11 11</a></div>
-      <button>Book a Service</button>
     </header>
 
-    <!--Portiunea principala a site-ului-->
+    <!-- Portiune principala a paginii web-->
     <main>
       <!--Hero section-->
-      <section>
-        <h5>A hair salon for men</h5>
-        <h1>BarberShop</h1>
-        <p>
-          We are experts in trendy men's haircuts.<br />
-          We work quickly, carefully, and tastefully.
-        </p>
+      <section class="hero-section">
+        <div class="container">
+          <h5 class="hero-section__subtitle">
+            Un barbershop pentru bărbații din Timișoara
+          </h5>
+          <h1 class="hero-section__title">BarberShop</h1>
+          <p class="hero-section__text">
+            Suntem experți în tunsorile trendy pentru bărbați.<br />
+            Lucrăm rapid, cu grijă și cu gust.
+          </p>
+        </div>
       </section>
 
       <!--About section-->
-      <section>
-        <!--Div cu imagini-->
-        <div>
-          <img src="imagini/imagine1.jpg" alt="Imagine client 1" />
-          <img src="imagini/imagine1.jpg" alt="Imagine client 2" />
-        </div>
+      <section class="about" id="Despre-noi">
+        <div class="container">
+          <div class="about__images">
+            <img
+              class="about__image"
+              src="./imagini/imagine1.jpg"
+              alt="Img 1"
+            />
+            <img
+              class="about__image"
+              src="./imagini/imagine2.jpg"
+              alt="Img 2"
+            />
+          </div>
 
-        <!--Div cu info-->
-        <div>
-          <h5>ABOUT</h5>
-          <h2>The Best Barbershop in Your City</h2>
-          <p>
-            If you want to add more confidence to your image, you are definitely
-            in the right place.
-          </p>
-          <p>
-            We are a team that never rests on its laurels and yearns for change.
-            <br />
-            And once you fall into the hands of our master, you will never be
-            the same again. <br />
-            We are a team that is always on the same wavelength with clients.
-            <br />
-            Therefore, we are always ready to improve everyone who comes to us!
-          </p>
-          <button>BOOK A SERVICE</button>
+          <div class="about__info">
+            <h5 class="about__subtitle">Despre noi</h5>
+            <h2 class="about__title">
+              Cel mai bun BarberShop <br />din orașul tău.
+            </h2>
+            <p class="about__text">
+              Dacă vrei să adaugi mai multă încredere imaginii tale, cu
+              siguranță ești în locul potrivit.
+            </p>
+            <p class="about__text-smaller">
+              Suntem o echipă care nu se odihnește niciodată și tânjește după
+              schimbare. Și odată ce ajungi în mâinile maestrului nostru, nu vei
+              mai fi niciodată la fel. Suntem o echipă mereu pe aceeași lungime
+              de undă cu clienții noștri. Prin urmare, suntem întotdeauna gata
+              să îmbunătățim pe oricine ne caută!
+            </p>
+            <button data-modal-open class="about__button button">
+              Programează-te acum!
+            </button>
+          </div>
         </div>
       </section>
 
       <!-- Prices & services section-->
-      <section>
-        <h5>Spend time in the company of the best craftsmen</h5>
-        <h2>Services and Prices</h2>
-        <ul>
-          <li>
-            <p>Men's Haircut <span>from 300 UAH</span></p>
-          </li>
-          <li>
-            <p>Beard Trim <span>from 200 UAH</span></p>
-          </li>
-          <li>
-            <p>Mustache Trim <span>from 200 UAH</span></p>
-          </li>
-          <li>
-            <p>Straight Razor Shave <span>from 200 UAH</span></p>
-          </li>
-        </ul>
+      <section class="services" id="Servicii-si-preturi">
+        <div class="container">
+          <h5 class="services__subtitle">
+            Petrece-ți timpul alături de cei mai buni frizeri.
+          </h5>
+          <h2 class="services__title">Servicii și prețuri</h2>
 
-        <ul>
-          <li>
-            <p>Trainee Haircut <span>from 50 UAH</span></p>
-          </li>
-          <li>
-            <p>Buzz Cut <span>from 200 UAH</span></p>
-          </li>
-          <li>
-            <p>Kids Haircut (12 y.o.) <span>from 300 UAH</span></p>
-          </li>
-          <li>
-            <p>Gray Coverage <span>from 200 UAH</span></p>
-          </li>
-        </ul>
+          <div class="service__container">
+            <ul class="services__list">
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns Fain -
+                  <span class="services__price">60 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns a la frizer - <span class="services__price">65 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns Prinț (copii) -
+                  <span class="services__price">40 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns Rege -
+                  <span class="services__price">100 RON</span>
+                </p>
+              </li>
+            </ul>
 
-        <button>Book a Service</button>
+            <ul class="services__list">
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns Urban -
+                  <span class="services__price">90 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Tuns barbă - <span class="services__price">25 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Aranjat barbă -
+                  <span class="services__price">15 RON</span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">
+                  Tunsoare personalizată -
+                  <span class="services__price">Preț special</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <button class="services__button button">Programează-te acum!</button>
+        </div>
       </section>
 
       <!-- Reviews section-->
-      <section>
-        <ul>
-          <li>
-            <p>
-              <strong>600<sup>+</sup></strong>
-            </p>
-            <p>Satisfied Customers<br />per Day</p>
-          </li>
-          <li>
-            <p>
-              <strong>50<sup>+</sup></strong>
-            </p>
-            <p>Excellent Service <br />Awards</p>
-          </li>
-          <li>
-            <p>
-              <strong>20<sup>+</sup></strong>
-            </p>
-            <p>
-              The Best Barbers<br />
-              of Kyiv
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>100<sup>+</sup></strong>
-            </p>
-            <p>
-              Gifts for Regular<br />
-              Customers
-            </p>
-          </li>
-        </ul>
+      <section class="statistics">
+        <div class="container">
+          <ul class="statistics__list">
+            <li class="statistics__item">
+              <p class="statistics__value">
+                <strong>600<sup>+</sup></strong>
+              </p>
+              <p class="statistics__description">
+                Clienți satisfăcuți<br />pe lună
+              </p>
+            </li>
+            <li class="statistics__item">
+              <p class="statistics__value">
+                <strong>50<sup>+</sup></strong>
+              </p>
+              <p class="statistics__description">
+                Premii pentru<br />servicii excelente
+              </p>
+            </li>
+            <li class="statistics__item">
+              <p class="statistics__value">
+                <strong>20<sup>+</sup></strong>
+              </p>
+              <p class="statistics__description">
+                Cei mai buni frizeri<br />
+                din România
+              </p>
+            </li>
+            <li class="statistics__item">
+              <p class="statistics__value">
+                <strong>100<sup>+</sup></strong>
+              </p>
+              <p class="statistics__description">
+                Cadouri pentru clienți<br />
+                fideli
+              </p>
+            </li>
+          </ul>
 
-        <div>
-          <h5>Old school</h5>
-          <h2>Why do they come to us?</h2>
-          <p>
-            Only good things are said about us. But it is better to see and feel
-            1 time than to read 10 times.
-          </p>
+          <div class="statistics__testimonial">
+            <h5 class="statistics__subtitle">Întrebare frecventă</h5>
+            <h2 class="statistics__title">De ce să vin la voi?</h2>
+            <p class="statistics__text">
+              Despre noi se spun numai lucruri bune. Dar e mai bine să vezi și
+              să simți o dată decât să citești de zece ori.😉
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- our barbers section-->
-      <section>
-        <h5>for true connoisseurs of the atmosphere</h5>
-        <h2>Our Barbers</h2>
-        <!-- container cu carduri despre frizeri-->
-        <div style="display: flex; gap: 30px">
-          <!-- Container 1-->
-          <div>
-            <img
-              src="imagini/img1.jpg"
-              alt="John Smith imagine"
-              width="100px"
-            />
-            <p>John Smith</p>
-            <p>Extreme Barber</p>
-          </div>
+      <section class="barbers" id="Barbers">
+        <div class="container">
+          <h4 class="barbers__subtitle">
+            Pentru adevărații cunoscători ai atmosferei.
+          </h4>
+          <h2 class="barbers__title">Echipa Noastră</h2>
 
-          <!-- Container 2-->
-          <div>
-            <img
-              src="imagini/img2.jpg"
-              alt="Michele Doe imagine"
-              width="100px"
-            />
-            <p>Michele Doe</p>
-            <p>Extreme Barber</p>
-          </div>
+          <!-- container cu carduri despre frizeri-->
+          <div class="barbers__container">
+            <!-- Container 1-->
+            <div class="barbers__card">
+              <div class="cards-img">
+                <div class="overlay">
+                  Maestru al tunsorilor, creator de stiluri moderne și îngrijire
+                  impecabilă.
+                </div>
+                <img
+                  src="./imagini/img1.jpg"
+                  alt="Popescu George imagine"
+                  class="barbers__image"
+                />
+              </div>
+              <p class="barbers__name">Popescu George</p>
+              <p class="barbers__role">Extreme Barber</p>
 
-          <!-- Container 3 -->
-          <div>
-            <img
-              src="imagini/img3.jpg"
-              alt="Alan Black imagine"
-              width="100px"
-            />
-            <p>Alan Black</p>
-            <p>Extreme Barber</p>
+              <ul class="barbers__social">
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-instagram-2" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ro.linkedin.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-linkedin-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-twitter-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-Vector" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Container 2-->
+            <div class="barbers__card">
+              <div class="cards-img">
+                <div class="overlay">
+                  Stilist expert, pasionat de frumusețea masculină, abordare
+                  atentă și inovatoare.
+                </div>
+                <img
+                  src="./imagini/img2.jpg"
+                  alt="Georgescu Mihai imagine"
+                  class="barbers__image"
+                />
+              </div>
+              <p class="barbers__name">Georgescu Mihai</p>
+              <p class="barbers__role">Professional Stylist</p>
+
+              <ul class="barbers__social">
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-instagram-2" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ro.linkedin.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-linkedin-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-twitter-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-Vector" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Container 3 -->
+            <div class="barbers__card">
+              <div class="cards-img">
+                <div class="overlay">
+                  Artist al frumuseții masculine, maestru al tăieturilor trendy
+                  și atent la detalii.
+                </div>
+                <img
+                  src="./imagini/img3.jpg"
+                  alt="Pop Alin imagine"
+                  class="barbers__image"
+                />
+              </div>
+              <p class="barbers__name">Pop Alin</p>
+              <p class="barbers__role">Trendy Barber</p>
+
+              <ul class="barbers__social">
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-instagram-2" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ro.linkedin.com/" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-linkedin-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-twitter-1" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <svg class="icon">
+                      <use href="./imagini/icons.svg#icon-Vector" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- our place section-->
-      <section>
-        <h5>In Latin, "barba" means "beard"</h5>
-        <div>
-          <img src="imagini/foto1.jpg" alt="Foto 1" />
-          <img src="imagini/foto2.jpg" alt="Foto 2" />
-          <img src="imagini/foto3.jpg" alt="Foto 3" />
-          <img src="imagini/foto4.jpg" alt="Foto 4" />
+      <section class="place">
+        <div class="container">
+          <h5 class="place__subtitle">
+            Un fapt interesant despre barbă este că, în istorie, barba a fost
+            adesea asociată cu puterea,</br>înțelepciunea și statutul social în
+            diverse culturi și perioade de timp. 
+          </h5>
+          
+          <div class="place__images">
+            <img src="./imagini/foto1.jpg" alt="Foto 1" class="place__image" />
+            <img src="./imagini/foto2.jpg" alt="Foto 2" class="place__image" />
+            <img src="./imagini/foto3.jpg" alt="Foto 3" class="place__image" />
+            <img src="./imagini/foto4.jpg" alt="Foto 4" class="place__image" />
+          </div>
         </div>
       </section>
 
-      <!-- our place section-->
-      <section></section>
+      <!-- contact section-->
+      <section class="contact" id="Contact">
+        <div class="contanct__form"></div>
+        <div class="contact__info">
+          <h2 class="contact__title">Contact</h2>
+          <address class="contact__info-address">
+            <p class="contact__address-item">
+              <svg class="icon">
+                <use href="./img/icons/symbol-defs.svg#icon-map-pin" />
+              </svg>
+              <a
+                href="https://www.google.com/maps/place/Main+Street,+7A+Kyiv,+08132"
+              >
+               Str.Mărului, nr.7, Timișoara, România</a
+              >
+            </p>
+            <p class="contact__address-item">
+              <svg class="icon">
+                <use href="./img/icons/symbol-defs.svg#icon-phone" />
+              </svg>
+              <a href="tel:+4074635637">+4074635637</a>
+            </p>
+
+            <p class="contact__address-item">
+              <svg class="icon">
+                <use href="./img/icons/symbol-defs.svg#icon-mail" />
+              </svg>
+              <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+            </p>
+          </address>
+          <p class="contact__subtitle">Orar</p>
+          <p class="contact__text">În fiecare zi de la 9:00 AM până la 22:00 PM</p>
+        </div>
+      </section>
     </main>
 
     <!-- footer section-->
-    <footer>
-      <p>&copy Copyright 2022</p>
-      <ul>
-        <li>Instagram</li>
-        <li>Youtube</li>
-      </ul>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copyright">&copy; Copyright 2024</p>
+        <ul class="footer__social">
+          <li class="footer__social-item">Instagram</li>
+          <li class="footer__social-item">Youtube</li>
+        </ul>
+      </div>
     </footer>
+
+    <div data-modal class="is-hidden">
+      <div data-modal-content>
+        <button data-modal-close type="button">X</button>
+        <h2 class="modal-title">
+          Lăsați-vă informațiile și vă vom suna înapoi
+        </h2>
+
+        <form name="modal-form" class="modal-form">
+          <label class="modal-form__position"
+            >Nume și prenume
+            <input type="text" name="username" class="modal-form__input" />
+            <svg width="12px" height="12px">
+              <use href="./img/icons/form-icons.svg#icon-person"></use>
+            </svg>
+          </label>
+          <label class="modal-form__position">
+            Telefon
+            <input type="tel" name="userphone" class="modal-form__input" />
+            <svg width="12px" height="12px">
+              <use href="./img/icons/form-icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+          <label class="modal-form__position">
+            E-mail
+            <input type="email" name="useremail" class="modal-form__input" />
+            <svg width="12px" height="12px">
+              <use href="./img/icons/form-icons.svg#icon-email"></use>
+            </svg>
+          </label>
+          <label class="modal-form__position">
+            Mesaj
+            <textarea
+              name="mesaj"
+              placeholder="Introdu mesajul tau"
+              class="modal-form__comments"
+              rows="5"
+            ></textarea>
+          </label>
+          <label class="modal-form__position modal-form__checked"
+            ><input
+              type="checkbox"
+              name="agree"
+              value="agree"
+              class="modal-form__input"
+            />
+            <span class="replace-checkbox modal-checkbox__position">
+              <svg>
+                <use href="./img/icons/form-icons.svg#icon-checked"></use>
+              </svg>
+            </span>
+            Sunt de acord cu formularul și accept
+            <a href="#" class="condition">Termenii și condițiile</a>
+          </label>
+
+          <button type="submit" class="modal-form__btn">Trimite</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
